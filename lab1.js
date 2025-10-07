@@ -1,17 +1,18 @@
+//NOTE - Imports
 import readlineSync from "readline-sync";
 
-const myName = readlineSync.question("What is your name? ");
+//SECTION - Week 1 Lab
+const inputName = readlineSync.question("What is your name? ");
 const num1 = 3;
 const num2 = 10;
 
-console.log("hello");
-console.log(myName);
+console.log(`Hello ${inputName}! Welcome to week 1 lab!`);
 console.log(num1 + num2);
 
-const reply = readlineSync.question("Enter your reply: ");
-console.log(reply);
+const inputReply = readlineSync.question(`Enter your reply ${inputName}:`);
+console.log(inputReply);
 
-if (reply.length > 10) {
+if (inputReply.length > 10) {
     console.log("Wow, such a long response!");
 } else {
     console.log("Nice and concise!");
@@ -37,3 +38,4 @@ while (index < 3) {
 
 console.log(userInput);
 console.log(`hello ${userInput}, you did this on the 7/10/25`);
+//!SECTION - End Week 1 Lab
