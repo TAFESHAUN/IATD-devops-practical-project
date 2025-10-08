@@ -1,0 +1,30 @@
+#TODO - YAML lab 3
+name: Intro Dev Ops Labs
+
+on: [push]
+
+jobs:
+  build_and_test:
+    name: Build and Test Job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.12.1
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+      
+      #LINK - Echo test
+      - name: Say Hello
+        run: echo  "Hello world test!"
+
+      #LINK - Run all tests
+      - name: Run Tests
+        run: npm test
