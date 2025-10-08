@@ -1,0 +1,1 @@
+[![Intro Dev Ops Labs](https://github.com/TAFESHAUN/IATD-devops-practical-project/actions/workflows/firstci.yml/badge.svg)](https://github.com/TAFESHAUN/IATD-devops-practical-project/actions/workflows/firstci.yml)
