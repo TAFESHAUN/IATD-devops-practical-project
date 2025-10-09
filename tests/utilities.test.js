@@ -54,3 +54,8 @@ test("wrapString: wrap false for day outside month's range. I did Feb here", () 
 test("wrapString: wrap returns false for day <= 0", () => {
     expect(isValidDateString("00/01/2023")).toBe(false);
 });
+
+// deliberately fails for lab 6
+test('failing test', () => {
+  expect(1).toBe(2); 
+});

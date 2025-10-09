@@ -6,6 +6,9 @@ const lineLength = 73;
 const mainMenuOptions = ["View current inventory", "Log inventory change", "EXIT"];
 const invChangeMenuOptions = ["Add/remove stock for existing item", "Add stock for new item"];
 
+//LAB 6 FAIL 
+const somevarUnsedForLint = 3452;
+
 let itemCategories = ["Food", "Clothing", "Electronics"];
 let inventoryItems = [
     {name: "Peaches", category: "Food", amount: 55, restocked: "15/05/2024"},
