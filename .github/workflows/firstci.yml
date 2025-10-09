@@ -7,7 +7,6 @@ jobs:
   build_and_test:
     name: Build and Test Job
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -15,25 +14,21 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.12.1
+          node-version: '20'
           cache: 'npm'
 
       - name: Install Dependencies
         run: npm ci
       
-      #LINK - Echo test
       - name: Say Hello
-        run: echo  "Hello world test!"
+        run: echo "Hello world test!"
 
-      #LINK - Run all tests
       - name: Run Tests
-        run: npm test
+        run: npm test --if-present
 
-# ---- CD: build & push Docker image (runs only if CI passed) ----
   build_and_push:
-    needs: test
+    needs: build_and_test
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -54,5 +49,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/TAFESHAUN/IATD-devops-practical-project:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/TAFESHAUN/IATD-devops-practical-project:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/iatd-devops-practical-project:latest
