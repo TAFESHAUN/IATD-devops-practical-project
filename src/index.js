@@ -7,7 +7,7 @@ const mainMenuOptions = ["View current inventory", "Log inventory change", "EXIT
 const invChangeMenuOptions = ["Add/remove stock for existing item", "Add stock for new item"];
 
 //LAB 6 FAIL 
-const somevarUnsedForLint = 3452;
+//const somevarUnsedForLint = 3452;
 
 let itemCategories = ["Food", "Clothing", "Electronics"];
 let inventoryItems = [
