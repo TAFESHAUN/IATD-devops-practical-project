@@ -56,6 +56,6 @@ test("wrapString: wrap returns false for day <= 0", () => {
 });
 
 // deliberately fails for lab 6
-test('failing test', () => {
-  expect(1).toBe(2); 
-});
+// test('failing test', () => {
+//   expect(1).toBe(2); 
+// });
